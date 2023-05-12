@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Matrix_Calculator
 {
-    public class MatrixCalculator
+    public class MatrixCalculatorClass
     {
         private int[,] matrix;
         private int rows, columns;
 
-        public MatrixCalculator(int n, int m)
+        public MatrixCalculatorClass(int n, int m)
         {
             this.rows = n;
             this.columns = m;
@@ -52,9 +52,9 @@ namespace Matrix_Calculator
             set { matrix[i, j] = value; }
         }
 
-        public static MatrixCalculator operator +(MatrixCalculator a, MatrixCalculator b)
+        public static MatrixCalculatorClass operator +(MatrixCalculatorClass a, MatrixCalculatorClass b)
         {
-           MatrixCalculator c = new MatrixCalculator(a.rows, a.columns);
+           MatrixCalculatorClass c = new MatrixCalculatorClass(a.rows, a.columns);
 
             for (int i = 0; i < c.Rows; i++)
             {
@@ -67,9 +67,9 @@ namespace Matrix_Calculator
             return c;
 
         }
-        public static MatrixCalculator operator -(MatrixCalculator a, MatrixCalculator b)
+        public static MatrixCalculatorClass operator -(MatrixCalculatorClass a, MatrixCalculatorClass b)
         {
-            MatrixCalculator c = new MatrixCalculator(a.rows, a.columns);
+            MatrixCalculatorClass c = new MatrixCalculatorClass(a.rows, a.columns);
 
             for (int i = 0; i < c.Rows; i++)
             {
@@ -83,9 +83,9 @@ namespace Matrix_Calculator
 
         }
 
-        public static MatrixCalculator operator *(MatrixCalculator a, MatrixCalculator b)
+        public static MatrixCalculatorClass operator *(MatrixCalculatorClass a, MatrixCalculatorClass b)
         {
-            MatrixCalculator c = new MatrixCalculator(a.rows, b.columns);
+            MatrixCalculatorClass c = new MatrixCalculatorClass(a.rows, b.columns);
             int l = a.rows;
 
             for (int i = 0; i < c.Rows; i++)
@@ -105,10 +105,10 @@ namespace Matrix_Calculator
 
             return c;
         }
-        public static MatrixCalculator TransposeMatrix(MatrixCalculator a)
+        public static MatrixCalculatorClass TransposeMatrix(MatrixCalculatorClass a)
         {
 
-            MatrixCalculator c = new MatrixCalculator(a.columns, a.rows);
+            MatrixCalculatorClass c = new MatrixCalculatorClass(a.columns, a.rows);
             for (int i = 0; i < c.Rows; i++)
             {
                 for (int j = 0; j < c.Columns; j++)
@@ -120,9 +120,9 @@ namespace Matrix_Calculator
 
         }
 
-        public static MatrixCalculator ScalarMultiply(MatrixCalculator a, int k)
+        public static MatrixCalculatorClass ScalarMultiply(MatrixCalculatorClass a, int k)
         {
-            MatrixCalculator c = new MatrixCalculator(a.rows, a.columns);
+            MatrixCalculatorClass c = new MatrixCalculatorClass(a.rows, a.columns);
             for (int i = 0; i < c.Rows; i++)
             {
                 for (int j = 0; j < c.Columns; j++)
@@ -133,7 +133,7 @@ namespace Matrix_Calculator
             return c;
         }
 
-        public static long Determinant(MatrixCalculator a)
+        public static long Determinant(MatrixCalculatorClass a)
         {
             long det = 0;
             if (a.rows == 1)
@@ -148,7 +148,7 @@ namespace Matrix_Calculator
             {
                 for (int i = 0; i < a.rows; i++)
                 {
-                    MatrixCalculator temp = new MatrixCalculator(a.rows - 1, a.columns - 1);
+                    MatrixCalculatorClass temp = new MatrixCalculatorClass(a.rows - 1, a.columns - 1);
                     for (int j = 1; j < a.rows; j++)
                     {
                         for (int k = 0; k < a.rows; k++)
