@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatrixCalculator"
         mc:Ignorable="d"
-        Title="MatrixCalculatorApp" Height="450" Width="800">
+        Title="MatrixCalculatorApp" Height="485" Width="990">
     <Grid>
+        <DataGrid x:Name="matrix1" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,20,460,215" Width="NaN" Height="NaN"/>
+        <DataGrid x:Name="matrix2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,284,460,25" Width="NaN" Height="NaN"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="570,92,0,0" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
