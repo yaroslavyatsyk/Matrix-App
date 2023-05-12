@@ -42,7 +42,10 @@ namespace Matrix_Calculator
                 }
             }
         }
-
+        public int[,] GetMatrix()
+        {
+            return matrix;
+        }
         public int this[int i, int j]
         {
             get { return matrix[i, j]; }
