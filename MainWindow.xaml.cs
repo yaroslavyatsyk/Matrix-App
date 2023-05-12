@@ -64,7 +64,7 @@ namespace MatrixCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error, Incorrect input(s)", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -86,7 +86,7 @@ namespace MatrixCalculator
                     }
                     else
                     {
-                        MessageBox.Show("The matrices must have the same number of rows and columns");
+                        MessageBox.Show("The matrices must have the same number of rows and columns", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
 
 
@@ -102,7 +102,7 @@ namespace MatrixCalculator
                     }
                     else
                     {
-                        MessageBox.Show("The matrices must have the same number of rows and columns");
+                        MessageBox.Show("The matrices must have the same number of rows and columns","Error",MessageBoxButton.OK,MessageBoxImage.Error);
                     }
                    
                 }
@@ -117,14 +117,14 @@ namespace MatrixCalculator
                     }
                     else
                     {
-                        MessageBox.Show("The number of columns of the first matrix must be equal to the number of rows of the second matrix");
+                        MessageBox.Show("The number of columns of the first matrix must be equal to the number of rows of the second matrix","Error",MessageBoxButton.OK,MessageBoxImage.Error);
                     }
                     
                 }
             }
                         catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("An error has occured", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -169,7 +169,7 @@ namespace MatrixCalculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error, Incorrect input(s)", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
