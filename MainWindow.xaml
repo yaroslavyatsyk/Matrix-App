@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MatrixCalculatorApp" Height="485" Width="990">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/240_F_409568122_UZ9SY4xMJYGaSw2902Iy4TztLiy06aHR.jpg"/>
+        </Grid.Background>
+
         <DataGrid x:Name="matrix1"  Margin="30,20,460,215" Width="NaN" Height="NaN"/>
         <DataGrid x:Name="matrix2" Margin="30,284,460,25" Width="NaN" Height="NaN"/>
         <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="750,0,0,0" VerticalAlignment="Center" Width="120">
@@ -17,13 +21,13 @@
         <Button x:Name="button" Content="Initiate Matrix" HorizontalAlignment="Left" Margin="550,144,0,0" VerticalAlignment="Top" Click="button_Click"/>
         <Button x:Name="button1" Content="Initiate Matrix" HorizontalAlignment="Left" Margin="550,364,0,0" VerticalAlignment="Top" Click="button1_Click"/>
         <Button x:Name="button2" Content="Calculate" HorizontalAlignment="Left" Margin="770,409,0,0" VerticalAlignment="Top" Click="button2_Click"/>
-        <Label x:Name="label" Content="Number of rows" HorizontalAlignment="Left" Margin="570,44,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Number of rows" HorizontalAlignment="Left" Margin="570,44,0,0" VerticalAlignment="Top" Background="#FFF9F9F9"/>
         <TextBox x:Name="Rows1" HorizontalAlignment="Left" Margin="690,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label_Copy" Content="Number of columns" HorizontalAlignment="Left" Margin="570,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Number of columns" HorizontalAlignment="Left" Margin="570,80,0,0" VerticalAlignment="Top" Background="#FFF9F9F9"/>
         <TextBox x:Name="Columns1" HorizontalAlignment="Left" Margin="690,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label_Copy1" Content="Number of rows" HorizontalAlignment="Left" Margin="550,269,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy1" Content="Number of rows" HorizontalAlignment="Left" Margin="550,269,0,0" VerticalAlignment="Top" Background="#FFF9F9F9"/>
         <TextBox x:Name="Rows2" HorizontalAlignment="Left" Margin="670,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="label_Copy2" Content="Number of columns" HorizontalAlignment="Left" Margin="550,305,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy2" Content="Number of columns" HorizontalAlignment="Left" Margin="550,305,0,0" VerticalAlignment="Top" Background="#FFF9F9F9"/>
         <TextBox x:Name="Columns2" HorizontalAlignment="Left" Margin="670,309,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
