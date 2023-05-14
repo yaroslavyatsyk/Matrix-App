@@ -38,7 +38,7 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = random.Next(1, 1001);
+                    matrix[i, j] = random.Next(1, 101);
                 }
             }
         }
