@@ -28,7 +28,7 @@ namespace MatrixCalculator
             InitializeComponent();
             matrixCalculator1 = matrix;
 
-            int[,] m = matrixCalculator1.GetMatrix();
+            var m = matrixCalculator1.GetMatrix();
 
             DataTable dataTable = new DataTable();
 

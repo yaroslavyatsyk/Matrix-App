@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ namespace Matrix_Calculator
 {
     public class MatrixCalculatorClass
     {
-        private int[,] matrix;
+        private double[,] matrix;
         private int rows, columns;
 
         public MatrixCalculatorClass(int n, int m)
@@ -17,7 +18,7 @@ namespace Matrix_Calculator
             this.rows = n;
             this.columns = m;
 
-            matrix = new int[rows, columns];
+            matrix = new double[rows, columns];
         }
 
         public int Rows
@@ -38,15 +39,15 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = random.Next(1, 101);
+                    matrix[i, j] = random.NextDouble() * 99 + 1;
                 }
             }
         }
-        public int[,] GetMatrix()
+        public double[,] GetMatrix()
         {
             return matrix;
         }
-        public int this[int i, int j]
+        public double this[int i, int j]
         {
             get { return matrix[i, j]; }
             set { matrix[i, j] = value; }
@@ -92,7 +93,7 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < c.Columns; j++)
                 {
-                    int res = 0;
+                    double res = 0d;
                     for (int x = 0; x < l; x++)
                     {
                         res += a[i, x] * b[x, j];
@@ -133,9 +134,9 @@ namespace Matrix_Calculator
             return c;
         }
 
-        public static long Determinant(MatrixCalculatorClass a)
+        public static double Determinant(MatrixCalculatorClass a)
         {
-            long det = 0;
+            double det = 0;
             if (a.rows == 1)
             {
                 det = a[0, 0];
@@ -167,6 +168,24 @@ namespace Matrix_Calculator
                 }
             }
             return det;
+        }
+
+        public bool IsIdentityMatrix()
+        {
+            for(int i = 0; i < rows; i++)
+            {
+                for(int j = 0; j < columns; j++)
+                {
+                    if(i == j && matrix[i, j] == 1)
+                    {
+
+                        return true;
+                    }
+
+                }
+                   
+            }
+            return false;
         }
 
     }

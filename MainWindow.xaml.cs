@@ -40,7 +40,7 @@ namespace MatrixCalculator
                 columns2 = int.Parse(Columns2.Text);
                 matrixCalculator2 = new MatrixCalculatorClass(rows2, columns2);
                 matrixCalculator2.FullMatrixWithValues();
-                int[,] m = matrixCalculator2.GetMatrix();
+                var m = matrixCalculator2.GetMatrix();
 
                 DataTable dataTable = new DataTable();
 
@@ -142,7 +142,7 @@ namespace MatrixCalculator
                 matrixCalculator1 = new MatrixCalculatorClass(rows1, columns1);
                 matrixCalculator1.FullMatrixWithValues();
 
-                int[,] m = matrixCalculator1.GetMatrix();
+                var m = matrixCalculator1.GetMatrix();
 
                
                 DataTable dataTable = new DataTable();
