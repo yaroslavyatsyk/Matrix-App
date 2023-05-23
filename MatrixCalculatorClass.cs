@@ -39,7 +39,7 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = random.NextDouble() * 99 + 1;
+                    matrix[i, j] = random.NextDouble() * (101 - 1) + 1;
                 }
             }
         }
