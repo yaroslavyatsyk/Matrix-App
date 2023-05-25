@@ -96,10 +96,10 @@ namespace MatrixCalculator
                     double res = 0d;
                     for (int x = 0; x < l; x++)
                     {
-                        res += Math.Round(a[i, x] * b[x, j],2);
+                        res += (a[i, x] * b[x, j]);
                     }
 
-                    c[i, j] = res;
+                    c[i, j] = Math.Round(res,2);
                    
                 }
             }
