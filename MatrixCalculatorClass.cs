@@ -39,7 +39,7 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = random.NextDouble() * (101 - 1) + 1;
+                    matrix[i, j] = Math.Round(random.NextDouble() * (101 - 1) + 1,2);
                 }
             }
         }
@@ -61,7 +61,7 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < c.Columns; j++)
                 {
-                    c[i, j] = a[i, j] + b[i, j];
+                    c[i, j] = Math.Round(a[i, j] + b[i, j],2);
                 }
             }
 
@@ -76,7 +76,7 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < c.Columns; j++)
                 {
-                    c[i, j] = a[i, j] - b[i, j];
+                    c[i, j] = Math.Round(a[i, j] + b[i, j], 2);
                 }
             }
 
@@ -96,7 +96,7 @@ namespace Matrix_Calculator
                     double res = 0d;
                     for (int x = 0; x < l; x++)
                     {
-                        res += a[i, x] * b[x, j];
+                        res += Math.Round(a[i, x] * b[x, j],2);
                     }
 
                     c[i, j] = res;
@@ -167,7 +167,7 @@ namespace Matrix_Calculator
                     det += a[0, i] * (int)Math.Pow(-1, i) * Determinant(temp);
                 }
             }
-            return det;
+            return Math.Round(det,2);
         }
 
         public bool IsIdentityMatrix()

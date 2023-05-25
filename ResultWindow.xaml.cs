@@ -36,7 +36,7 @@ namespace MatrixCalculator
 
             for (int c = 0; c < m.GetLength(1); c++)
             {
-                dataTable.Columns.Add(new DataColumn("", typeof(int)));
+                dataTable.Columns.Add(new DataColumn("", typeof(double)));
             }
 
 
