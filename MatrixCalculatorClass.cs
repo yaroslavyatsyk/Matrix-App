@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Matrix_Calculator
+namespace MatrixCalculator
 {
     public class MatrixCalculatorClass
     {
@@ -187,6 +187,8 @@ namespace Matrix_Calculator
             }
             return false;
         }
+
+
 
     }
 }
