@@ -76,7 +76,7 @@ namespace Matrix_Calculator
             {
                 for (int j = 0; j < c.Columns; j++)
                 {
-                    c[i, j] = Math.Round(a[i, j] + b[i, j], 2);
+                    c[i, j] = Math.Round(a[i, j] - b[i, j], 2);
                 }
             }
 
