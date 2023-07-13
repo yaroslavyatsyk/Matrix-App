@@ -1,6 +1,6 @@
 # MatrixCalculator
 
-Welcome to the matrix calculator app. This app is assigned to help student to get more familiar with matrices and arithmetic operations on them.
+Welcome to the matrix calculator app. This app is assigned to help studentі to get more familiar with matrices and arithmetic operations on them.
 
 
 For matrices, there are three basic arithmetic operations
