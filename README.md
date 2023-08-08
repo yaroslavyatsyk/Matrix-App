@@ -10,7 +10,7 @@ For matrices, there are three basic arithmetic operations
 
 There are examples of each operation on two matrices.
 
-1. Addiction
+1. Addition
 ![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/d1da3e57-6457-48e1-8ecf-dcaef2323bfe)
 
 2. Substraction
