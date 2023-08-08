@@ -4,7 +4,7 @@ Welcome to the matrix calculator app. This app is assigned to help studentі to 
 
 
 For matrices, there are three basic arithmetic operations
-* addiction
+* addition
 * substraction
 * multiplication
 
