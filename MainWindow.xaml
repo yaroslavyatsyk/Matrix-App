@@ -7,9 +7,7 @@
         mc:Ignorable="d"
         Title="MatrixCalculatorApp" Height="485" Width="990">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/240_F_409568122_UZ9SY4xMJYGaSw2902Iy4TztLiy06aHR.jpg"/>
-        </Grid.Background>
+       
 
         <DataGrid x:Name="matrix1"  Margin="30,20,460,215" Width="NaN" Height="NaN" />
         <DataGrid x:Name="matrix2" Margin="30,284,460,25" Width="NaN" Height="NaN" />
