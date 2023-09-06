@@ -21,8 +21,8 @@ There are examples of each operation on two matrices.
 
 
 3. Multiplication
-![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/62fc34ff-b61b-4281-8f99-7c0f4bdf6773)
-![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/4e99ed49-9d16-4764-8197-56243623182f)
+![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/cb03781e-0e93-4600-9fad-44093e04c8a9)
+![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/0a1230bb-d5f7-4b0b-ab52-cad33830c11d)
 
 
 
