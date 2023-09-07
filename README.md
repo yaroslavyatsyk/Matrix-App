@@ -5,7 +5,7 @@ Welcome to the matrix calculator app. This app is assigned to help studentі to 
 
 For matrices, there are three basic arithmetic operations
 * addition
-* substraction
+* subtraction
 * multiplication
 
 There are examples of each operation on two matrices.
@@ -15,7 +15,7 @@ There are examples of each operation on two matrices.
 ![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/e84bf12e-a429-4ce5-a2e1-c7fba1c95937)
 
 
-2. Substraction
+2. Subtraction
 ![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/75a942d5-4108-4b55-be59-8a86bf03dbd2)
 ![image](https://github.com/yaroslavyatsyk/Matrix-Calculator-App/assets/31794068/2555791b-92ab-4387-88f6-f54f2da9de8c)
 
