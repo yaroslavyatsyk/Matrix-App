@@ -11,10 +11,10 @@
 
         <DataGrid x:Name="matrix1"  Margin="30,20,460,215" Width="NaN" Height="NaN" />
         <DataGrid x:Name="matrix2" Margin="30,284,460,25" Width="NaN" Height="NaN" />
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="750,0,0,0" VerticalAlignment="Center" Width="120">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="750,0,0,0" VerticalAlignment="Center" Width="120" FontSize="18">
             <ComboBoxItem Content="+"/>
             <ComboBoxItem Content="-"/>
-            <ComboBoxItem Content="*"/>
+            <ComboBoxItem Content="x"/>
        
         </ComboBox>
         <Button x:Name="button" Content="Initiate Matrix" HorizontalAlignment="Left" Margin="550,144,0,0" VerticalAlignment="Top" Click="button_Click"/>
