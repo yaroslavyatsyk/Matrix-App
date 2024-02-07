@@ -107,7 +107,7 @@ namespace MatrixCalculator
                    
                 }
 
-                else if (operation.Equals("*") && operation != null)
+                else if (operation.Equals("x") && operation != null)
                 {
                     if(matrixCalculator1.Columns == matrixCalculator2.Rows)
                     {
