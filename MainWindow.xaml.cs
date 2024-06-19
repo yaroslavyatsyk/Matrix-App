@@ -126,6 +126,8 @@ namespace MatrixCalculator
             {
                 MessageBox.Show("An error has occured", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
+
         }
 
         public MainWindow()
