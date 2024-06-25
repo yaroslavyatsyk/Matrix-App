@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatrixCalculator"
         mc:Ignorable="d"
-        Title="Matrix App" Height="Auto" Width="auto" ResizeMode="CanResize" SizeToContent="WidthAndHeight">
+        Title="Matrix App" Height="450" Width="800">
     <Viewbox>
         <Grid>
 
@@ -13,7 +13,7 @@
 
             <TabControl x:Name="tabControl">
                 <TabItem Header="Matrix Calculator">
-                    <Grid Background="#FFE5E5E5" Margin="-4,0,-1,0" Height="Auto" Width="Auto">
+                    <Grid Background="#FFE5E5E5" Margin="-4,0,-1,0" Height="450" Width="900">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="137*"/>
                             <ColumnDefinition Width="847*"/>
@@ -41,10 +41,10 @@
                         <Label x:Name="label1_Copy" Grid.Column="1" Content="Upper limit of range" HorizontalAlignment="Left" Margin="620,79,0,0" VerticalAlignment="Top" Background="White"/>
                         <Label x:Name="label1_Copy1" Grid.Column="1" Content="Lower limit of range" HorizontalAlignment="Left" Margin="604,264,0,0" VerticalAlignment="Top" Background="White"/>
                         <Label x:Name="label1_Copy2" Grid.Column="1" Content="Upper limit of range" HorizontalAlignment="Left" Margin="604,299,0,0" VerticalAlignment="Top" Background="White"/>
-                        <TextBox x:Name="LowerLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
-                        <TextBox x:Name="UpperLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
-                        <TextBox x:Name="LowerLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="738,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
-                        <TextBox x:Name="UpperLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="738,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                        <TextBox x:Name="LowerLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
+                        <TextBox x:Name="UpperLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28" Height="16"/>
+                        <TextBox x:Name="LowerLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="732,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="31"/>
+                        <TextBox x:Name="UpperLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="732,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
                     </Grid>
                 </TabItem>
                 <TabItem Header="Matrix Properties">

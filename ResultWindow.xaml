@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="ResultWindow" Height="450" Width="800">
     <Viewbox>
-        <Grid>
+        <Grid Width="800">
 
-            <DataGrid x:Name="dataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,0,0,65"/>
+            <DataGrid x:Name="dataGrid" Margin="0,0,0,35"/>
             <Button x:Name="button" Content="Close" HorizontalAlignment="Left" Margin="305,374,0,0" VerticalAlignment="Top" Click="button_Click"/>
 
         </Grid>
