@@ -10,7 +10,7 @@ namespace MatrixCalculator
 {
     public class MatrixCalculatorClass
     {
-        private int[,] matrix;
+        protected int[,] matrix;
         protected int rows, columns;
 
         public MatrixCalculatorClass(int n, int m)
@@ -134,59 +134,7 @@ namespace MatrixCalculator
             return c;
         }
 
-        public static double Determinant(MatrixCalculatorClass a)
-        {
-            double det = 0;
-            if (a.rows == 1)
-            {
-                det = a[0, 0];
-            }
-            else if (a.rows == 2)
-            {
-                det = a[0, 0] * a[1, 1] - a[0, 1] * a[1, 0];
-            }
-            else
-            {
-                for (int i = 0; i < a.rows; i++)
-                {
-                    MatrixCalculatorClass temp = new MatrixCalculatorClass(a.rows - 1, a.columns - 1);
-                    for (int j = 1; j < a.rows; j++)
-                    {
-                        for (int k = 0; k < a.rows; k++)
-                        {
-                            if (k < i)
-                            {
-                                temp[j - 1, k] = a[j, k];
-                            }
-                            else if (k > i)
-                            {
-                                temp[j - 1, k - 1] = a[j, k];
-                            }
-                        }
-                    }
-                    det += a[0, i] * (int)Math.Pow(-1, i) * Determinant(temp);
-                }
-            }
-            return Math.Round(det,2);
-        }
-
-        public bool IsIdentityMatrix()
-        {
-            for(int i = 0; i < rows; i++)
-            {
-                for(int j = 0; j < columns; j++)
-                {
-                    if(i == j && matrix[i, j] == 1)
-                    {
-
-                        return true;
-                    }
-
-                }
-                   
-            }
-            return false;
-        }
+       
 
 
 

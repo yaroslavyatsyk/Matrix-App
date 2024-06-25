@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MatrixCalculator"
         mc:Ignorable="d"
         Title="Matrix App" Height="485" Width="990">
-    <Grid Height="auto" Width="auto">
+    <Grid>
 
 
 
@@ -48,6 +48,13 @@
             </TabItem>
             <TabItem Header="Matrix Properties">
                 <Grid Background="#FFE5E5E5">
+                    <DataGrid x:Name="dataGrid" Margin="27,13,572,132"/>
+                    <Button x:Name="button3" Content="Show Properties" HorizontalAlignment="Left" Margin="457,329,0,0" VerticalAlignment="Top"/>
+                    <DataGrid x:Name="dataGrid1" Margin="607,19,62,137"/>
+                    <Label x:Name="label2" Content="Number of rows" HorizontalAlignment="Left" Margin="52,329,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label3" Content="Number of columns" HorizontalAlignment="Left" Margin="52,368,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="RowBox" HorizontalAlignment="Left" Margin="192,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="ColumnBox" HorizontalAlignment="Left" Margin="192,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
                 </Grid>
             </TabItem>
