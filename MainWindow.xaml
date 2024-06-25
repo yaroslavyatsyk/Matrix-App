@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatrixCalculator"
         mc:Ignorable="d"
-        Title="Matrix App" Height="450" Width="800">
+        Title="Matrix App" Height="auto" Width="auto">
     <Viewbox>
         <Grid>
 
@@ -16,7 +16,7 @@
                     <Grid Background="#FFE5E5E5" Margin="-4,0,-1,0" Height="450" Width="900">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="137*"/>
-                            <ColumnDefinition Width="847*"/>
+                            <ColumnDefinition Width="900*"/>
                         </Grid.ColumnDefinitions>
                         <DataGrid x:Name="matrix1"  Margin="30,20,460,215" Width="NaN" Height="NaN" Grid.ColumnSpan="2" />
                         <DataGrid x:Name="matrix2" Margin="32,252,458,22" Width="NaN" Height="NaN" Grid.ColumnSpan="2" />
