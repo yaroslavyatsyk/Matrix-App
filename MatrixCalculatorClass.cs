@@ -10,15 +10,15 @@ namespace MatrixCalculator
 {
     public class MatrixCalculatorClass
     {
-        private double[,] matrix;
-        private int rows, columns;
+        private int[,] matrix;
+        protected int rows, columns;
 
         public MatrixCalculatorClass(int n, int m)
         {
             this.rows = n;
             this.columns = m;
 
-            matrix = new double[rows, columns];
+            matrix = new int[rows, columns];
         }
 
         public int Rows
@@ -31,7 +31,7 @@ namespace MatrixCalculator
             get { return columns; }
         }
 
-        public void FullMatrixWithValues()
+        public void FullMatrixWithValues(int min, int max)
         {
             Random random = new Random();
 
@@ -39,15 +39,15 @@ namespace MatrixCalculator
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    matrix[i, j] = Math.Round(random.NextDouble() * (101 - 1) + 1,2);
+                    matrix[i, j] = random.Next(min, max + 1);
                 }
             }
         }
-        public double[,] GetMatrix()
+        public int[,] GetMatrix()
         {
             return matrix;
         }
-        public double this[int i, int j]
+        public int this[int i, int j]
         {
             get { return matrix[i, j]; }
             set { matrix[i, j] = value; }
@@ -61,7 +61,7 @@ namespace MatrixCalculator
             {
                 for (int j = 0; j < c.Columns; j++)
                 {
-                    c[i, j] = Math.Round(a[i, j] + b[i, j],2);
+                    c[i, j] = a[i, j] + b[i, j];
                 }
             }
 
@@ -76,7 +76,7 @@ namespace MatrixCalculator
             {
                 for (int j = 0; j < c.Columns; j++)
                 {
-                    c[i, j] = Math.Round(a[i, j] - b[i, j], 2);
+                    c[i, j] = a[i, j] - b[i, j];
                 }
             }
 
@@ -93,13 +93,13 @@ namespace MatrixCalculator
             {
                 for (int j = 0; j < c.Columns; j++)
                 {
-                    double res = 0d;
+                    var res = 0;
                     for (int x = 0; x < l; x++)
                     {
                         res += (a[i, x] * b[x, j]);
                     }
 
-                    c[i, j] = Math.Round(res,2);
+                    c[i, j] = res;
                    
                 }
             }

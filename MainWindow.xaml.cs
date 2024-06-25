@@ -31,6 +31,8 @@ namespace MatrixCalculator
 
         int rows1, columns1;
         int rows2, columns2;
+        int lowerLimit1, upperLimit1;
+        int lowerLimit2, upperLimit2;
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
@@ -38,8 +40,10 @@ namespace MatrixCalculator
             {
                 rows2 = int.Parse(Rows2.Text);
                 columns2 = int.Parse(Columns2.Text);
+                lowerLimit2 = int.Parse(LowerLimit2.Text);
+                upperLimit2 = int.Parse(UpperLimit2.Text);
                 matrixCalculator2 = new MatrixCalculatorClass(rows2, columns2);
-                matrixCalculator2.FullMatrixWithValues();
+                matrixCalculator2.FullMatrixWithValues(lowerLimit2,upperLimit2);
                 var m = matrixCalculator2.GetMatrix();
 
                 DataTable dataTable = new DataTable();
@@ -47,7 +51,7 @@ namespace MatrixCalculator
 
                 for (int c = 0; c < m.GetLength(1); c++)
                 {
-                    dataTable.Columns.Add(new DataColumn("", typeof(double)));
+                    dataTable.Columns.Add(new DataColumn("", typeof(int)));
                 }
 
 
@@ -128,6 +132,7 @@ namespace MatrixCalculator
             }
 
 
+
         }
 
         public MainWindow()
@@ -141,8 +146,10 @@ namespace MatrixCalculator
             {
                 rows1 = int.Parse(Rows1.Text);
                 columns1 = int.Parse(Columns1.Text);
+                lowerLimit1 = int.Parse(LowerLimit1.Text);
+                upperLimit1 = int.Parse(UpperLimit1.Text);
                 matrixCalculator1 = new MatrixCalculatorClass(rows1, columns1);
-                matrixCalculator1.FullMatrixWithValues();
+                matrixCalculator1.FullMatrixWithValues(lowerLimit1,upperLimit1);
 
                 var m = matrixCalculator1.GetMatrix();
 
@@ -151,7 +158,7 @@ namespace MatrixCalculator
 
                 for (int c = 0; c < m.GetLength(1); c++)
                 {
-                    dataTable.Columns.Add(new DataColumn("",typeof(double)));
+                    dataTable.Columns.Add(new DataColumn("",typeof(int)));
                 }
 
 
