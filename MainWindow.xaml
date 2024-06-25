@@ -5,70 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MatrixCalculator"
         mc:Ignorable="d"
-        Title="Matrix App" Height="485" Width="990">
-    <Grid>
+        Title="Matrix App" Height="Auto" Width="auto" ResizeMode="CanResize" SizeToContent="WidthAndHeight">
+    <Viewbox>
+        <Grid>
 
 
 
-        <TabControl x:Name="tabControl">
-            <TabItem Header="Matrix Calculator">
-                <Grid Background="#FFE5E5E5" Margin="-4,0,-1,0" Height="Auto" Width="Auto">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="137*"/>
-                        <ColumnDefinition Width="847*"/>
-                    </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="matrix1"  Margin="30,20,460,215" Width="NaN" Height="NaN" Grid.ColumnSpan="2" />
-                    <DataGrid x:Name="matrix2" Margin="32,252,458,22" Width="NaN" Height="NaN" Grid.ColumnSpan="2" />
-                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="435,194,0,0" VerticalAlignment="Top" Width="120" FontSize="18" Grid.Column="1">
-                        <ComboBoxItem Content="+"/>
-                        <ComboBoxItem Content="-"/>
-                        <ComboBoxItem Content="x"/>
+            <TabControl x:Name="tabControl">
+                <TabItem Header="Matrix Calculator">
+                    <Grid Background="#FFE5E5E5" Margin="-4,0,-1,0" Height="Auto" Width="Auto">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="137*"/>
+                            <ColumnDefinition Width="847*"/>
+                        </Grid.ColumnDefinitions>
+                        <DataGrid x:Name="matrix1"  Margin="30,20,460,215" Width="NaN" Height="NaN" Grid.ColumnSpan="2" />
+                        <DataGrid x:Name="matrix2" Margin="32,252,458,22" Width="NaN" Height="NaN" Grid.ColumnSpan="2" />
+                        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="435,194,0,0" VerticalAlignment="Top" Width="120" FontSize="18" Grid.Column="1">
+                            <ComboBoxItem Content="+"/>
+                            <ComboBoxItem Content="-"/>
+                            <ComboBoxItem Content="x"/>
 
-                    </ComboBox>
-                    <Button x:Name="button" Content="Initiate Matrix" HorizontalAlignment="Left" Margin="413,144,0,0" VerticalAlignment="Top" Click="button_Click" Grid.Column="1"/>
-                    <Button x:Name="button1" Content="Initiate Matrix" HorizontalAlignment="Left" Margin="413,364,0,0" VerticalAlignment="Top" Click="button1_Click" Grid.Column="1"/>
-                    <Button x:Name="button2" Content="Calculate" HorizontalAlignment="Left" Margin="625,359,0,0" VerticalAlignment="Top" Click="button2_Click" Grid.Column="1"/>
-                    <Label x:Name="label" Content="Number of rows" HorizontalAlignment="Left" Margin="433,44,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
-                    <TextBox x:Name="Rows1" HorizontalAlignment="Left" Margin="553,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" Grid.Column="1"/>
-                    <Label x:Name="label_Copy" Content="Number of columns" HorizontalAlignment="Left" Margin="433,80,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
-                    <TextBox x:Name="Columns1" HorizontalAlignment="Left" Margin="555,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" Grid.Column="1"/>
-                    <Label x:Name="label_Copy1" Content="Number of rows" HorizontalAlignment="Left" Margin="413,269,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
-                    <TextBox x:Name="Rows2" HorizontalAlignment="Left" Margin="533,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42" Grid.Column="1"/>
-                    <Label x:Name="label_Copy2" Content="Number of columns" HorizontalAlignment="Left" Margin="413,305,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
-                    <TextBox x:Name="Columns2" HorizontalAlignment="Left" Margin="533,309,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" Grid.Column="1"/>
-                    <Label x:Name="label1" Grid.Column="1" Content="Lower limit of range" HorizontalAlignment="Left" Margin="620,44,0,0" VerticalAlignment="Top" Background="White"/>
-                    <Label x:Name="label1_Copy" Grid.Column="1" Content="Upper limit of range" HorizontalAlignment="Left" Margin="620,79,0,0" VerticalAlignment="Top" Background="White"/>
-                    <Label x:Name="label1_Copy1" Grid.Column="1" Content="Lower limit of range" HorizontalAlignment="Left" Margin="604,264,0,0" VerticalAlignment="Top" Background="White"/>
-                    <Label x:Name="label1_Copy2" Grid.Column="1" Content="Upper limit of range" HorizontalAlignment="Left" Margin="604,299,0,0" VerticalAlignment="Top" Background="White"/>
-                    <TextBox x:Name="LowerLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
-                    <TextBox x:Name="UpperLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
-                    <TextBox x:Name="LowerLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="738,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
-                    <TextBox x:Name="UpperLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="738,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
-                </Grid>
-            </TabItem>
-            <TabItem Header="Matrix Properties">
-                <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="dataGrid" Margin="27,13,572,132"/>
-                    <Button x:Name="button3" Content="Show Properties" HorizontalAlignment="Left" Margin="462,69,0,0" VerticalAlignment="Top" Click="button3_Click"/>
-                    <DataGrid x:Name="transGrid" Margin="607,19,62,137"/>
-                    <Label x:Name="label2" Content="Number of rows" HorizontalAlignment="Left" Margin="52,329,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label3" Content="Number of columns" HorizontalAlignment="Left" Margin="52,368,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="RowBox" HorizontalAlignment="Left" Margin="162,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
-                    <TextBox x:Name="ColumnBox" HorizontalAlignment="Left" Margin="177,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.333,0.171"/>
-                    <Label x:Name="label4" Content="Lower Limit" HorizontalAlignment="Left" Margin="254,329,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="Lower" HorizontalAlignment="Left" Margin="337,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-                    <Label x:Name="label4_Copy" Content="Upper Limit" HorizontalAlignment="Left" Margin="259,364,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="Upper" HorizontalAlignment="Left" Margin="342,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
-                    <Label x:Name="label5" Content="Determinant" HorizontalAlignment="Left" Margin="582,314,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="determinant" HorizontalAlignment="Left" Margin="687,319,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="85"/>
-                    <Label x:Name="label6" Content="Is Matrix Symmetric?" HorizontalAlignment="Left" Margin="573,353,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="symmetric" HorizontalAlignment="Left" Margin="702,361,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
-                    <Label x:Name="label7" Content="Is Identity Matrix" HorizontalAlignment="Left" Margin="582,389,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="identity" HorizontalAlignment="Left" Margin="702,394,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
+                        </ComboBox>
+                        <Button x:Name="button" Content="Initiate Matrix" HorizontalAlignment="Left" Margin="413,144,0,0" VerticalAlignment="Top" Click="button_Click" Grid.Column="1"/>
+                        <Button x:Name="button1" Content="Initiate Matrix" HorizontalAlignment="Left" Margin="413,364,0,0" VerticalAlignment="Top" Click="button1_Click" Grid.Column="1"/>
+                        <Button x:Name="button2" Content="Calculate" HorizontalAlignment="Left" Margin="625,359,0,0" VerticalAlignment="Top" Click="button2_Click" Grid.Column="1"/>
+                        <Label x:Name="label" Content="Number of rows" HorizontalAlignment="Left" Margin="433,44,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
+                        <TextBox x:Name="Rows1" HorizontalAlignment="Left" Margin="553,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" Grid.Column="1"/>
+                        <Label x:Name="label_Copy" Content="Number of columns" HorizontalAlignment="Left" Margin="433,80,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
+                        <TextBox x:Name="Columns1" HorizontalAlignment="Left" Margin="555,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45" Grid.Column="1"/>
+                        <Label x:Name="label_Copy1" Content="Number of rows" HorizontalAlignment="Left" Margin="413,269,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
+                        <TextBox x:Name="Rows2" HorizontalAlignment="Left" Margin="533,273,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="42" Grid.Column="1"/>
+                        <Label x:Name="label_Copy2" Content="Number of columns" HorizontalAlignment="Left" Margin="413,305,0,0" VerticalAlignment="Top" Background="#FFF9F9F9" Grid.Column="1"/>
+                        <TextBox x:Name="Columns2" HorizontalAlignment="Left" Margin="533,309,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" Grid.Column="1"/>
+                        <Label x:Name="label1" Grid.Column="1" Content="Lower limit of range" HorizontalAlignment="Left" Margin="620,44,0,0" VerticalAlignment="Top" Background="White"/>
+                        <Label x:Name="label1_Copy" Grid.Column="1" Content="Upper limit of range" HorizontalAlignment="Left" Margin="620,79,0,0" VerticalAlignment="Top" Background="White"/>
+                        <Label x:Name="label1_Copy1" Grid.Column="1" Content="Lower limit of range" HorizontalAlignment="Left" Margin="604,264,0,0" VerticalAlignment="Top" Background="White"/>
+                        <Label x:Name="label1_Copy2" Grid.Column="1" Content="Upper limit of range" HorizontalAlignment="Left" Margin="604,299,0,0" VerticalAlignment="Top" Background="White"/>
+                        <TextBox x:Name="LowerLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+                        <TextBox x:Name="UpperLimit1" Grid.Column="1" HorizontalAlignment="Left" Margin="743,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                        <TextBox x:Name="LowerLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="738,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50"/>
+                        <TextBox x:Name="UpperLimit2" Grid.Column="1" HorizontalAlignment="Left" Margin="738,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Matrix Properties">
+                    <Grid Background="#FFE5E5E5">
+                        <DataGrid x:Name="dataGrid" Margin="27,13,572,132"/>
+                        <Button x:Name="button3" Content="Show Properties" HorizontalAlignment="Left" Margin="462,69,0,0" VerticalAlignment="Top" Click="button3_Click"/>
+                        <DataGrid x:Name="transGrid" Margin="607,19,62,137"/>
+                        <Label x:Name="label2" Content="Number of rows" HorizontalAlignment="Left" Margin="52,329,0,0" VerticalAlignment="Top"/>
+                        <Label x:Name="label3" Content="Number of columns" HorizontalAlignment="Left" Margin="52,368,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="RowBox" HorizontalAlignment="Left" Margin="162,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                        <TextBox x:Name="ColumnBox" HorizontalAlignment="Left" Margin="177,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.333,0.171"/>
+                        <Label x:Name="label4" Content="Lower Limit" HorizontalAlignment="Left" Margin="254,329,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="Lower" HorizontalAlignment="Left" Margin="337,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+                        <Label x:Name="label4_Copy" Content="Upper Limit" HorizontalAlignment="Left" Margin="259,364,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="Upper" HorizontalAlignment="Left" Margin="342,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+                        <Label x:Name="label5" Content="Determinant" HorizontalAlignment="Left" Margin="582,314,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="determinant" HorizontalAlignment="Left" Margin="687,319,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="85"/>
+                        <Label x:Name="label6" Content="Is Matrix Symmetric?" HorizontalAlignment="Left" Margin="573,353,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="symmetric" HorizontalAlignment="Left" Margin="702,361,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
+                        <Label x:Name="label7" Content="Is Identity Matrix" HorizontalAlignment="Left" Margin="582,389,0,0" VerticalAlignment="Top"/>
+                        <TextBox x:Name="identity" HorizontalAlignment="Left" Margin="702,394,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
 
-                </Grid>
-            </TabItem>
-        </TabControl>
+                    </Grid>
+                </TabItem>
+            </TabControl>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Window>
