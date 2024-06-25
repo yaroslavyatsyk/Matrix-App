@@ -49,12 +49,22 @@
             <TabItem Header="Matrix Properties">
                 <Grid Background="#FFE5E5E5">
                     <DataGrid x:Name="dataGrid" Margin="27,13,572,132"/>
-                    <Button x:Name="button3" Content="Show Properties" HorizontalAlignment="Left" Margin="457,329,0,0" VerticalAlignment="Top"/>
-                    <DataGrid x:Name="dataGrid1" Margin="607,19,62,137"/>
+                    <Button x:Name="button3" Content="Show Properties" HorizontalAlignment="Left" Margin="462,69,0,0" VerticalAlignment="Top" Click="button3_Click"/>
+                    <DataGrid x:Name="transGrid" Margin="607,19,62,137"/>
                     <Label x:Name="label2" Content="Number of rows" HorizontalAlignment="Left" Margin="52,329,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="label3" Content="Number of columns" HorizontalAlignment="Left" Margin="52,368,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="RowBox" HorizontalAlignment="Left" Margin="192,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="ColumnBox" HorizontalAlignment="Left" Margin="192,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="RowBox" HorizontalAlignment="Left" Margin="162,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+                    <TextBox x:Name="ColumnBox" HorizontalAlignment="Left" Margin="177,371,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" RenderTransformOrigin="0.333,0.171"/>
+                    <Label x:Name="label4" Content="Lower Limit" HorizontalAlignment="Left" Margin="254,329,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="Lower" HorizontalAlignment="Left" Margin="337,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+                    <Label x:Name="label4_Copy" Content="Upper Limit" HorizontalAlignment="Left" Margin="259,364,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="Upper" HorizontalAlignment="Left" Margin="342,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70"/>
+                    <Label x:Name="label5" Content="Determinant" HorizontalAlignment="Left" Margin="582,314,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="determinant" HorizontalAlignment="Left" Margin="687,319,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="85"/>
+                    <Label x:Name="label6" Content="Is Matrix Symmetric?" HorizontalAlignment="Left" Margin="573,353,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="symmetric" HorizontalAlignment="Left" Margin="702,361,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
+                    <Label x:Name="label7" Content="Is Identity Matrix" HorizontalAlignment="Left" Margin="582,389,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="identity" HorizontalAlignment="Left" Margin="702,394,0,0" TextWrapping="Wrap" IsReadOnly="True" VerticalAlignment="Top" Width="120"/>
 
                 </Grid>
             </TabItem>

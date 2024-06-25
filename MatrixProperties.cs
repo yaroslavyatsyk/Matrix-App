@@ -81,5 +81,55 @@ namespace Matrix_App
             return true;
         }
 
+        public int Determinant()
+        {
+            if (rows != columns)
+            {
+                throw new Exception("The matrix is not square");
+            }
+            if (rows == 1)
+            {
+                return matrix[0, 0];
+            }
+            if (rows == 2)
+            {
+                return matrix[0, 0] * matrix[1, 1] - matrix[0, 1] * matrix[1, 0];
+            }
+            int det = 0;
+            for (int i = 0; i < rows; i++)
+            {
+                det += (int)Math.Pow(-1, i) * matrix[0, i] * GetMinor(0, i).Determinant();
+            }
+            return det;
+        }
+
+        private MatrixProperties GetMinor(int v, int i)
+        {
+            
+            MatrixProperties minor = new MatrixProperties(rows - 1, columns - 1);
+            for (int j = 0; j < rows; j++)
+            {
+                for (int k = 0; k < columns; k++)
+                {
+                    if (j < v && k < i)
+                    {
+                        minor[j, k] = matrix[j, k];
+                    }
+                    if (j < v && k > i)
+                    {
+                        minor[j, k - 1] = matrix[j, k];
+                    }
+                    if (j > v && k < i)
+                    {
+                        minor[j - 1, k] = matrix[j, k];
+                    }
+                    if (j > v && k > i)
+                    {
+                        minor[j - 1, k - 1] = matrix[j, k];
+                    }
+                }
+            }
+            return minor;
+        }
     }
 }

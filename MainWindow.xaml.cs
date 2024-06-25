@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Matrix_App;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
@@ -33,6 +34,82 @@ namespace MatrixCalculator
         int rows2, columns2;
         int lowerLimit1, upperLimit1;
         int lowerLimit2, upperLimit2;
+        int rows3, columns3;
+        int lowerLimit3, upperLimit3;
+
+        MatrixProperties matrixProperties;
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                rows3 = int.Parse(RowBox.Text);
+                columns3 = int.Parse(ColumnBox.Text);
+                lowerLimit3 = int.Parse(Lower.Text);
+                upperLimit3 = int.Parse(Upper.Text);
+
+                matrixProperties = new MatrixProperties(rows3, columns3);
+
+                matrixProperties.FullMatrixWithValues(lowerLimit3, upperLimit3);
+
+                var m = matrixProperties.GetMatrix();
+
+                DataTable dataTable = new DataTable();
+
+                for (int c = 0; c < m.GetLength(1); c++)
+                {
+                    dataTable.Columns.Add(new DataColumn("", typeof(int)));
+                }
+
+                
+
+                for (int r = 0; r < m.GetLength(0); r++)
+                {
+                    DataRow dataRow = dataTable.Rows.Add();
+                    for (int c = 0; c < m.GetLength(1); c++)
+                    {
+                        dataRow[c] = m[r, c];
+                    }
+                }
+
+                dataGrid.ItemsSource = dataTable.DefaultView;
+
+                var transposedMatrix = matrixProperties.GetTransposition();
+
+                var transposedMatrixValues = transposedMatrix.GetMatrix();
+
+                DataTable dataTable2 = new DataTable();
+
+                for(int c = 0; c < transposedMatrixValues.GetLength(0); c++)
+                {
+                    dataTable2.Columns.Add(new DataColumn("", typeof(int)));
+                }
+
+                for(int r = 0; r < transposedMatrixValues.GetLength(0); r++)
+                {
+                    DataRow dataRow = dataTable2.Rows.Add();
+
+                    for(int c = 0; c < transposedMatrixValues.GetLength(1); c++)
+                    {
+                        dataRow[c] = transposedMatrixValues[r, c];
+                    }
+                }
+
+                transGrid.ItemsSource = dataTable2.DefaultView;
+
+                determinant.Text = matrixProperties.Determinant().ToString();
+
+                symmetric.Text = matrixProperties.IsSymmetricMatrix().ToString();
+
+                identity.Text = matrixProperties.IsIdentityMatrix().ToString();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error has occured", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
